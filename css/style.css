@@ -1,0 +1,30 @@
+:root{
+/*definicion de paleta de colores*/
+--canary-yellow: #f2f230ff;
+--green-yellow: #c2f261ff;
+--light-green: #91f291ff;
+--aquamarine: #61f2c2ff;
+--neon-ice: #30f2f2ff;
+}
+
+.navegador{
+    background-color: var(--aquamarine);
+    color: black; 
+}
+
+#mainCont{
+    min-height: 100vh; /*todo el espacio de la pantalla*/
+    display: grid; /*convertir en contenedor de cuadrícula*/
+    place-items: center; /*centra vertical y horizontalmente*/
+}
+
+#colCont {
+  text-align: start;
+}
+
+.enlaces{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
