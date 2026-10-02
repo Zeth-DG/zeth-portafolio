@@ -12,7 +12,7 @@
     color: black; 
 }
 
-#mainCont{
+.container{
     min-height: 100vh; /*todo el espacio de la pantalla*/
     display: grid; /*convertir en contenedor de cuadrícula*/
     place-items: center; /*centra vertical y horizontalmente*/
