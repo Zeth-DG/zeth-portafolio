@@ -63,7 +63,7 @@ a { text-underline-offset: 0.2em; }
 .tarjeta { background: var(--superficie); border: 1px solid var(--linea); border-radius: 0 2rem 0 2rem; overflow: hidden; display: flex; flex-direction: column; }
 .tarjeta img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--linea); }
 .tarjeta-cuerpo { padding: 1.25rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
-.tarjeta-cuerpo p { margin: 10; }
+.tarjeta-cuerpo p { margin: 0; }
 .tarjeta-enlaces { margin-top: auto; display: flex; gap: 1.25rem; flex-wrap: wrap; }
 .etiqueta { align-self: flex-start; font-size: 0.9rem; padding: 0.1rem 0.75rem; border: 1px solid var(--tinta); border-radius: 999px; }
 .etiqueta--proceso { border-color: var(--flor); color: var(--flor); border-style: dashed; }
@@ -86,3 +86,13 @@ a { text-underline-offset: 0.2em; }
   html { scroll-behavior: auto; }
   .lectura { animation: none; }
 }
+
+/* El tope de 65ch es solo para texto largo de lectura, no para tarjetas ni modales */
+.tarjeta p, .tarjeta li,
+.modal-body p, .modal-body li { max-width: none; }
+
+/* Footer del modal alineado a la izquierda */
+.modal-footer { justify-content: flex-start; gap: 1.25rem; }
+
+/* Que una tarjeta sola no se estire a todo el ancho */
+.tarjetas { grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); }
