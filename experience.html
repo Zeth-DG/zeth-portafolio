@@ -1,31 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habilidades & experiencia</title>
+    <title>Habilidades y experiencia | Lizeth Dorantes</title>
+    <meta name="description" content="Tecnologías, herramientas y habilidades de Lizeth Dorantes, desarrolladora Java Full Stack Jr.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 <body>
     <header id="header-global"></header>
-    
+
     <main id="mainCont" class="hero">
         <div class="row">
             <div id="colCont" class="col">
-                <h1>Tecnologías web</h1>
-                <p></p>
-                <br>
-                <h1>Herramientas</h1>
-                <p></p>
-                <br>
-                <h1>Otras habilidades</h1>
-                <p></p>
+                <h1>Habilidades y experiencia</h1>
+
+                <!-- Leyenda: el nivel se distingue por relleno y borde, no solo por color -->
+                <ul class="leyenda" aria-label="Leyenda de niveles">
+                    <li><span class="chip chip--diario">Uso a diario</span></li>
+                    <li><span class="chip">Con experiencia</span></li>
+                    <li><span class="chip chip--aprendo">Aprendiendo</span></li>
+                </ul>
+
+                <section class="grupo" aria-labelledby="t-web">
+                    <h2 id="t-web">Tecnologías web</h2>
+                    <ul class="chips">
+                        <!-- Ajusta el nivel cambiando la clase: chip--diario | (ninguna) | chip--aprendo -->
+                        <li class="chip">Java</li>
+                        <li class="chip">JavaScript</li>
+                        <li class="chip">SQL</li>
+                        <li class="chip">HTML</li>
+                        <li class="chip">CSS</li>
+                        <li class="chip">Bootstrap</li>
+                        <li class="chip">Jest</li>
+                    </ul>
+                </section>
+
+                <section class="grupo" aria-labelledby="t-herr">
+                    <h2 id="t-herr">Herramientas</h2>
+                    <ul class="chips">
+                        <li class="chip">Git y GitHub</li>
+                        <li class="chip">ThingsBoard</li>
+                    </ul>
+                </section>
+
+                <section class="grupo" aria-labelledby="t-otras">
+                    <h2 id="t-otras">Otras habilidades</h2>
+                    <ul class="chips">
+                        <li class="chip">Coordinación de proyectos</li>
+                        <li class="chip">Documentación y trazabilidad</li>
+                        <li class="chip">Comunicación entre equipos</li>
+                        <li class="chip">Método científico</li>
+                    </ul>
+                </section>
             </div>
         </div>
     </main>
+
+    <footer class="pie">
+        <p>Lizeth Dorantes &copy; 2026. Escríbeme a <a href="mailto:lzethdg@gmail.com">lzethdg@gmail.com</a></p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="./js/main.js" type="module"></script>
