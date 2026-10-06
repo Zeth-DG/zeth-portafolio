@@ -3,9 +3,11 @@
   --fondo: #EDF1E6;
   --superficie: #F9FBF5;
   --tinta: #1F3D2E;          /* texto y títulos */
-  --hoja: #4F8A5B;           /* decoración (no para texto pequeño) */
-  --enlace: #2F6B3F;         /* enlaces, contraste AA sobre fondo */
-  --flor: #8B4A7A;           /* acento: estados y detalles */
+  --hoja: #4F8A5B;           /* decoración */
+  --enlace: #2F6B3F;         /* enlaces */
+  --flor: #8B4A7A;           /* acento secundario */
+  --tierra: #3D3028;         /* nuevo tono tierra para footer */
+  --tierra-texto: #F4EBE1;   /* texto claro para fondo tierra */
   --linea: #C9D4BC;
 
   --fuente-titulo: "Young Serif", Georgia, serif;
@@ -15,7 +17,7 @@
   --bs-body-color: var(--tinta);
   --bs-body-font-family: var(--fuente-texto);
   --bs-link-color: var(--enlace);
-  --bs-link-hover-color: var(--flor);
+  --bs-link-hover-color: var(--hoja);
 }
 
 /* ===== Base ===== */
@@ -27,39 +29,66 @@ h2 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); }
 h3 { font-size: 1.35rem; }
 p, li { max-width: 65ch; }
 a { text-underline-offset: 0.2em; }
-:focus-visible { outline: 3px solid var(--flor); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--hoja); outline-offset: 3px; }
 .enlaces { display: flex; gap: 1.25rem; font-size: 1.6rem; margin-top: 1.5rem; }
 .enlaces a { color: var(--tinta); }
-.enlaces a:hover { color: var(--flor); }
+.enlaces a:hover { color: var(--hoja); }
 
-/* ===== Estructura ===== */
-#header-global { padding: 1rem 1.25rem; }
-.hero, .seccion, .about { max-width: 68rem; margin: 0 auto; padding: 3rem 1.25rem; }
-.hero { padding-top: 4rem; }
+/* ===== Header Sticky con color propio ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--superficie);
+  padding: 1rem 1.25rem;
+  z-index: 1030;
+  box-shadow: 0 4px 20px rgba(31, 61, 46, 0.06);
+  border-bottom: 2px solid var(--linea);
+  width: 100%;
+}
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.nav-list a {
+  text-decoration: none;
+  color: var(--tinta);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+.nav-list a:hover, .nav-list a.active {
+  color: var(--enlace);
+}
+
+/* ===== Pantallazos (Secciones a pantalla completa) =====. */
+.hero, .seccion, .about {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .hero h2 { font-size: clamp(1.25rem, 2.6vw, 1.75rem); color: var(--enlace); margin-bottom: 1rem; }
+
 .separador {
   height: 20px; max-width: 68rem; margin: 0 auto;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20'%3E%3Cpath d='M0 10h85M115 10h85' stroke='%234F8A5B' stroke-width='1.5' fill='none'/%3E%3Cpath d='M100 3c8 3 8 11 0 14-8-3-8-11 0-14z' fill='%234F8A5B'/%3E%3C/svg%3E") center / 200px 20px no-repeat;
 }
+
 .about-contenido { display: grid; gap: 2rem; align-items: center; }
 .about-contenido img { width: 100%; max-width: 20rem; border-radius: 0 3rem 0 3rem; }
 @media (min-width: 768px) { .about-contenido { grid-template-columns: 1fr auto; } }
 
-/* ===== lectura ambiental ===== */
-.lectura {
-  display: inline-block; margin: 1rem 0 0; padding: 1rem 1.5rem;
-  background: var(--superficie); border: 1px solid var(--linea);
-  border-left: 6px solid var(--hoja); border-radius: 0 1.5rem 0 1.5rem;
-  animation: brotar 700ms ease-out both;
-}
-.lectura p { margin: 0; }
-.lectura-titulo { font-family: var(--fuente-titulo); }
-.lectura-datos { font-size: 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
-.lectura-fuente { font-size: 0.875rem; }
-@keyframes brotar { from { opacity: 0; transform: translateY(10px) scale(.97); } }
-
 /* ===== Tarjetas de proyecto ===== */
-.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.75rem; margin-top: 1.5rem; }
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.75rem; margin-top: 1.5rem; width: 100%; }
 .tarjeta { background: var(--superficie); border: 1px solid var(--linea); border-radius: 0 2rem 0 2rem; overflow: hidden; display: flex; flex-direction: column; }
 .tarjeta img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--linea); }
 .tarjeta-cuerpo { padding: 1.25rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
@@ -69,30 +98,37 @@ a { text-underline-offset: 0.2em; }
 .etiqueta--proceso { border-color: var(--flor); color: var(--flor); border-style: dashed; }
 .stack { font-size: 0.95rem; }
 
-/* ===== Habilidades ===== */
-.grupo { margin-bottom: 2.5rem; }
-.chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.75rem; }
-.chip { padding: 0.25rem 0.9rem; border-radius: 999px; border: 2px solid var(--tinta); background: transparent; }
-.chip--diario { background: var(--tinta); color: var(--superficie); }
-.chip--aprendo { border-style: dashed; border-color: var(--flor); }
-.leyenda { display: flex; gap: 1rem; flex-wrap: wrap; list-style: none; padding: 0; font-size: 0.95rem; }
+/* ===== Botones y Footer Tierra ===== */
+.boton {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: var(--tinta);
+  color: var(--superficie);
+  border-radius: 0 1.2rem 0 1.2rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.boton:hover {
+  background: var(--hoja);
+  color: var(--superficie);
+}
 
-/* ===== Contacto y botones ===== */
-.boton { display: inline-block; padding: 0.6rem 1.4rem; background: var(--tinta); color: var(--superficie); border-radius: 0 1.2rem 0 1.2rem; text-decoration: none; }
-.boton:hover { background: var(--flor); color: var(--superficie); }
-.pie { max-width: 68rem; margin: 2rem auto 0; padding: 1.5rem 1.25rem 2.5rem; border-top: 1px solid var(--linea); font-size: 0.95rem; }
+.pie {
+  background-color: var(--tierra);
+  color: var(--tierra-texto);
+  padding: 2.5rem 1.25rem;
+  margin-top: 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.pie a {
+  color: var(--tierra-texto);
+  text-decoration: underline;
+}
+.pie a:hover {
+  color: var(--superficie);
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .lectura { animation: none; }
 }
-
-/* El tope de 65ch es solo para texto largo de lectura, no para tarjetas ni modales */
-.tarjeta p, .tarjeta li,
-.modal-body p, .modal-body li { max-width: none; }
-
-/* Footer del modal alineado a la izquierda */
-.modal-footer { justify-content: flex-start; gap: 1.25rem; }
-
-/* Que una tarjeta sola no se estire a todo el ancho */
-.tarjetas { grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); }
