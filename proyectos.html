@@ -15,131 +15,135 @@
 <body>
     <header id="header-global" class="site-header"></header>
 
-    <main id="mainCont" class="seccion-alineada-izquierda">
-        <div class="row w-100">
-            <div id="colCont" class="col">
-                <h1>Mis proyectos</h1>
-                <p class="mb-4">Aplicaciones web y soluciones enfocadas en la experiencia de usuario y el código limpio.</p>
+    <main id="mainCont" class="hero" style="align-items: flex-start;">
+        <div class="w-100">
+            <h1>Mis proyectos</h1>
+            <p class="text-start mb-4" style="max-width: 80ch;">Aplicaciones web y soluciones enfocadas en la experiencia de usuario, el código limpio y la resolución de problemas reales.</p>
 
-                <div class="tarjetas">
-                    <!-- Sketch & coffee -->
-                    <article id="tarjeta-sketch" class="tarjeta">
-                        <img src="./images/logos/logo-sketch-and-coffee-fondo-guinda.jpg" alt="Logo de Sketch &amp; Coffee" width="640" height="400" loading="lazy">
-                        <div class="tarjeta-cuerpo">
-                            <span class="etiqueta etiqueta--proceso">En proceso</span>
-                            <h3>Sketch &amp; Coffee</h3>
-                            <p>Tienda en línea de concepto 2D. Frontend funcional y backend en desarrollo.</p>
-                            <p class="stack"><strong>Stack:</strong> HTML, CSS, JavaScript, Jest, Figma</p>
-                            <button type="button" class="boton mt-2" data-bs-toggle="modal" data-bs-target="#modal-sketch">Ver detalle</button>
+            <div class="tarjetas">
+                <!--Sketch & coffee-->
+                <article id="tarjeta-sketch" class="tarjeta">
+                    <img src="./images/logos/logo-sketch-and-coffee-fondo-guinda.jpg" alt="Logo de Sketch &amp; Coffee" width="640" height="400" loading="lazy">
+                    <div class="tarjeta-cuerpo">
+                        <span class="etiqueta etiqueta--proceso">En proceso</span>
+                        <h2>Sketch &amp; Coffee</h2>
+                        <p>Tienda en línea de cafetería 2D. Frontend funcional y backend en desarrollo.</p>
+                        <p class="stack text-muted small mt-1"><strong>Stack:</strong> HTML, CSS, JavaScript, Jest, Figma</p>
+                        <div class="tarjeta-enlaces mt-3">
+                            <button type="button" class="boton" data-bs-toggle="modal" data-bs-target="#modal-sketch">Ver detalle</button>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <!-- NEME -->
-                    <article id="tarjeta-neme" class="tarjeta">
-                        <img src="./images/logos/logo-neme-punto-de-cruz.png" alt="Logo de neme" width="640" height="400" loading="lazy">
-                        <div class="tarjeta-cuerpo">
-                            <span class="etiqueta etiqueta--terminada">Terminada</span>
-                            <h3>Neme</h3>
-                            <p>Landing responsive de ropa deportiva cómoda, desarrollada en una semana.</p>
-                            <p class="stack"><strong>Stack:</strong> HTML, CSS, JavaScript</p>
-                            <button type="button" class="boton mt-2" data-bs-toggle="modal" data-bs-target="#modal-neme">Ver detalle</button>
+                <!--NEME-->
+                <article id="tarjeta-neme" class="tarjeta">
+                    <img src="./images/logos/logo-neme-punto-de-cruz.png" alt="Logo de neme" width="640" height="400" loading="lazy">
+                    <div class="tarjeta-cuerpo">
+                        <span class="etiqueta etiqueta--terminada">Terminada</span>
+                        <h2>Neme</h2>
+                        <p>Landing page de ropa deportiva enfocada en la comodidad para disfrutar el movimiento.</p>
+                        <p class="stack text-muted small mt-1"><strong>Stack:</strong> HTML, CSS, JavaScript</p>
+                        <div class="tarjeta-enlaces mt-3">
+                            <button type="button" class="boton" data-bs-toggle="modal" data-bs-target="#modal-neme">Ver detalle</button>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <!-- Tierra deportiva -->
-                    <article id="tarjeta-tierraD" class="tarjeta">
-                        <img src="./images/logos/logo-tierra-deportiva.jpeg" alt="Logo de tierra deportiva" width="640" height="400" loading="lazy">
-                        <div class="tarjeta-cuerpo">
-                            <span class="etiqueta etiqueta--terminada">Terminada</span>
-                            <h3>Tierra deportiva</h3>
-                            <p>Landing interactiva de productos deportivos mexicanos creada en hackathon.</p>
-                            <p class="stack"><strong>Stack:</strong> HTML, CSS, JavaScript</p>
-                            <button type="button" class="boton mt-2" data-bs-toggle="modal" data-bs-target="#modal-tierra-deportiva">Ver detalle</button>
+                <!--Tierra deportiva-->
+                <article id="tarjeta-tierraD" class="tarjeta">
+                    <img src="./images/logos/logo-tierra-deportiva.jpeg" alt="Logo de tierra deportiva" width="640" height="400" loading="lazy">
+                    <div class="tarjeta-cuerpo">
+                        <span class="etiqueta etiqueta--terminada">Terminada</span>
+                        <h2>Tierra deportiva</h2>
+                        <p>Landing page interactiva de productos deportivos mexicanos creada en hackathon.</p>
+                        <p class="stack text-muted small mt-1"><strong>Stack:</strong> HTML, CSS, JavaScript</p>
+                        <div class="tarjeta-enlaces mt-3">
+                            <button type="button" class="boton" data-bs-toggle="modal" data-bs-target="#modal-tierra-deportiva">Ver detalle</button>
                         </div>
-                    </article>
-                </div>
+                    </div>
+                </article>
             </div>
         </div>
 
-        <!-- Modales optimizados -->
-        <!-- Modal Sketch & Coffee -->
+        <!-- Modales optimizados con listas claras -->
+        <!-- Modal Sketch & coffee -->
         <div class="modal fade" id="modal-sketch" tabindex="-1" aria-labelledby="modal-sketch-titulo" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
-                <div class="modal-content">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content text-start">
                     <div class="modal-header">
-                        <h2 class="modal-title fs-4" id="modal-sketch-titulo">Sketch &amp; Coffee</h2>
+                        <h2 class="modal-title fs-3" id="modal-sketch-titulo">Sketch &amp; Coffee</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
-                    <div class="modal-body text-start">
-                        <img class="img-fluid rounded mb-3" src="./images/sketch-and-coffee.png" alt="Captura completa de Sketch &amp; Coffee">
+                    <div class="modal-body">
+                        <img class="img-fluid rounded mb-3 w-100" src="./images/sketch-and-coffee.png" alt="Captura completa de Sketch &amp; Coffee">
                         <h3>El problema</h3>
-                        <p>Centralizar menú, pedidos y tienda en línea de una cafetería conceptual 2D conservando su identidad visual única.</p>
+                        <p class="text-start ms-0">Centralizar menú, pedidos y tienda en línea de una cafetería conceptual 2D conservando su identidad visual única.</p>
                         <h3>Mi rol y aporte</h3>
-                        <ul>
-                            <li><strong>Frontend:</strong> Desarrollo de header reutilizable, hero y paleta de colores.</li>
-                            <li><strong>Calidad:</strong> Validaciones de formularios y pruebas unitarias con Jest.</li>
-                            <li><strong>Accesibilidad:</strong> Migración a la tipografía Atkinson Hyperlegible tras detectar problemas de legibilidad.</li>
-                            <li><strong>Gestión:</strong> Rol rotativo de Scrum Master y Product Owner en equipo de 7 durante 8 semanas.</li>
+                        <ul class="text-start ps-3">
+                            <li><strong>Frontend:</strong> desarrollo del header reutilizable, hero y paleta de colores.</li>
+                            <li><strong>Calidad:</strong> validaciones de formularios y pruebas unitarias con Jest.</li>
+                            <li><strong>Accesibilidad:</strong> migración a la tipografía Atkinson Hyperlegible tras detectar problemas de legibilidad.</li>
+                            <li><strong>Gestión:</strong> rol rotativo de Scrum Master y Product Owner en equipo de 7 durante 8 semanas.</li>
                         </ul>
                         <h3>Estado</h3>
-                        <p>Frontend funcional. Implementación de backend en curso[cite: 4].</p>
+                        <p class="text-start ms-0">Frontend funcional. Implementación de backend en curso.</p>
                     </div>
-                    <div class="modal-footer">
-                        <span class="text-muted small">Demo próximamente</span>
-                        <span class="text-muted small">Código próximamente</span>
+                    <div class="modal-footer justify-content-between">
+                        <span class="text-muted small">Demo (próximamente)</span>
+                        <span class="text-muted small">Código (próximamente)</span>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Modal Neme -->
+        
+        <!-- Modal NEME -->
         <div class="modal fade" id="modal-neme" tabindex="-1" aria-labelledby="modal-neme-titulo" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
-                <div class="modal-content">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content text-start">
                     <div class="modal-header">
-                        <h2 class="modal-title fs-4" id="modal-neme-titulo">Neme</h2>
+                        <h2 class="modal-title fs-3" id="modal-neme-titulo">Neme</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
-                    <div class="modal-body text-start">
-                        <img class="img-fluid rounded mb-3" src="./images/neme.png" alt="Captura completa de Neme">
+                    <div class="modal-body">
+                        <img class="img-fluid rounded mb-3 w-100" src="./images/neme.png" alt="Captura completa de Neme">
                         <h3>El concepto</h3>
-                        <p>Marca de ropa deportiva enfocada en comodidad y movimiento para mujeres y disidencias, con identidad inspirada en el bordado mazahua.</p>
+                        <p class="text-start ms-0">Marca de ropa deportiva enfocada en comodidad y movimiento para mujeres y disidencias, con identidad inspirada en el bordado mazahua.</p>
                         <h3>Mi rol y aporte</h3>
-                        <p>Proyecto individual de una semana. Creación de concepto, identidad visual, catálogo en JSON y desarrollo web completo.</p>
+                        <p class="text-start ms-0">Proyecto individual de una semana. Creación de concepto, identidad visual, catálogo en JSON y desarrollo web completo.</p>
                         <h3>Retos técnicos</h3>
-                        <ul>
+                        <ul class="text-start ps-3">
                             <li>Implementación de modales de producto y menú hamburguesa adaptativo.</li>
                             <li>Uso estratégico de IA para optimizar tiempos de desarrollo en el plazo establecido.</li>
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <a href="https://github.com/Zeth-DG/neme-landpage-ropa-deportiva" target="_blank" rel="noopener noreferrer" class="boton btn-sm">Ver código</a>
+                        <a href="https://github.com/Zeth-DG/neme-landpage-ropa-deportiva" target="_blank" rel="noopener noreferrer" class="boton">Ver código</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal Tierra Deportiva -->
+        <!-- Modal Tierra deportiva -->
         <div class="modal fade" id="modal-tierra-deportiva" tabindex="-1" aria-labelledby="modal-tierra-deportiva-titulo" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
-                <div class="modal-content">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content text-start">
                     <div class="modal-header">
-                        <h2 class="modal-title fs-4" id="modal-tierra-deportiva-titulo">Tierra deportiva</h2>
+                        <h2 class="modal-title fs-3" id="modal-tierra-deportiva-titulo">Tierra deportiva</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
-                    <div class="modal-body text-start">
-                        <img class="img-fluid rounded mb-3" src="./images/tierra-deportiva.png" alt="Captura completa de landpage tierra deportiva">
+                    <div class="modal-body">
+                        <img class="img-fluid rounded mb-3 w-100" src="./images/tierra-deportiva.png" alt="Captura completa de landpage tierra deportiva">
                         <h3>El concepto</h3>
-                        <p>Landing page colaborativa de productos deportivos mexicanos para fútbol, gym, natación y running.</p>
+                        <p class="text-start ms-0">Landing page colaborativa de productos deportivos mexicanos para fútbol, gym, natación y running.</p>
                         <h3>Mi rol y aporte</h3>
-                        <ul>
-                            <li>Diseño de estructura HTML base y sección de productos.</li>
+                        <ul class="text-start ps-3">
+                            <li>Diseño de estructura HTML base y sección de productosli>
                             <li>Optimización de navegación en carrusel mediante JavaScript.</li>
                             <li>Gestión de control de versiones y recuperación de ramas en equipo durante hackathon.</li>
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <a href="https://github.com/Manutaro/Hackathon-1-Landing-page-interactiva" target="_blank" rel="noopener noreferrer" class="boton btn-sm">Ver código</a>
+                        <a href="https://github.com/Manutaro/Hackathon-1-Landing-page-interactiva" target="_blank" rel="noopener noreferrer" class="boton">Ver código</a>
                     </div>
                 </div>
             </div>

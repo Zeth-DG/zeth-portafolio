@@ -250,6 +250,50 @@ a { text-underline-offset: 0.2em; }
 .chip--aprendo { border-style: dashed; border-color: var(--flor); }
 .leyenda { display: flex; gap: 1rem; flex-wrap: wrap; list-style: none; padding: 0; font-size: 0.95rem; justify-content: center; }
 
+/* ===== Ajustes para Proyectos ===== */
+.tarjetas { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
+  gap: 2rem; /* Mayor espacio entre tarjetas para que respiren */
+  margin-top: 2rem; 
+  width: 100%; 
+  text-align: left; 
+}
+
+/* ===== Corrección específica para la página de Proyectos ===== */
+#mainCont.hero {
+  align-items: flex-start; /* Alinea todo el contenido de proyectos a la izquierda */
+  text-align: left;
+}
+
+#mainCont.hero h1 {
+  text-align: left; /* Fuerza el título principal a la izquierda */
+  width: 100%;
+}
+
+/* Forzamos que los modales mantengan su ancho adecuado y texto alineado a la izquierda */
+.modal-dialog {
+  max-width: 90% !important;
+}
+
+@media (min-width: 992px) {
+  .modal-dialog.modal-xl {
+    max-width: 1140px !important;
+  }
+}
+
+.modal-content {
+  text-align: left !important;
+}
+
+.modal-body p, 
+.modal-body li {
+  text-align: left !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 /* ===== Botones y Footer Tierra ===== */
 .boton {
   display: inline-block;
