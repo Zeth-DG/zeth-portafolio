@@ -2,12 +2,12 @@
 :root {
   --fondo: #EDF1E6;
   --superficie: #F9FBF5;
-  --tinta: #1F3D2E;          /* texto y títulos */
-  --hoja: #4F8A5B;           /* decoración y hover de botones */
-  --enlace: #2F6B3F;         /* enlaces, contraste AA sobre fondo */
-  --flor: #8B4A7A;           /* acento secundario */
-  --tierra: #3D3028;         /* tono tierra para footer */
-  --tierra-texto: #F4EBE1;   /* texto claro para fondo tierra */
+  --tinta: #1F3D2E;
+  --hoja: #4F8A5B;
+  --enlace: #2F6B3F;
+  --flor: #8B4A7A;
+  --tierra: #3D3028;
+  --tierra-texto: #F4EBE1;
   --linea: #C9D4BC;
 
   /* Mapeo para compatibilidad con el header global */
@@ -23,33 +23,82 @@
   --bs-body-color: var(--tinta);
   --bs-body-font-family: var(--fuente-texto);
   --bs-link-color: var(--enlace);
-  --bs-link-hover-color: var(--hoja);
+  --bs-link-hover-color: var(--tinta);
 }
 
 /* ===== Base ===== */
-html { scroll-behavior: smooth; }
-body { font-size: 1.0625rem; line-height: 1.6; }
-h1, h2, h3, h4 { font-family: var(--fuente-titulo); font-weight: 400; line-height: 1.2; color: var(--tinta); text-align: center; }
-h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
-h2 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); }
-h3 { font-size: 1.35rem; }
-p, li { max-width: 65ch; }
-p { text-align: center; margin-left: auto; margin-right: auto; }
-a { text-underline-offset: 0.2em; }
-:focus-visible { outline: 3px solid var(--hoja); outline-offset: 3px; }
-
-/* Enlaces del Hero centrados y grandes */
-.hero .enlaces { 
-  display: flex; 
-  gap: 1.5rem; 
-  font-size: 2.2rem; 
-  margin-top: 2rem; 
-  justify-content: center; 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
-.hero .enlaces a { color: var(--tinta); }
-.hero .enlaces a:hover { color: var(--hoja); }
 
-/* ===== Header Sticky con color propio ===== */
+body {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulo);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--tinta);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+p, li {
+  max-width: 65ch;
+}
+
+a {
+  text-underline-offset: 0.2em;
+  color: var(--enlace);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--tinta);
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 3px solid var(--hoja);
+  outline-offset: 3px;
+}
+
+/* ===== Botones ===== */
+button.boton {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: var(--tinta);
+  color: var(--superficie);
+  border-radius: 0 1.2rem 0 1.2rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.boton:hover {
+  background: var(--hoja);
+  color: var(--superficie);
+}
+
+/* ===== Header Sticky ===== */
 .site-header {
   position: sticky;
   top: 0;
@@ -60,6 +109,7 @@ a { text-underline-offset: 0.2em; }
   border-bottom: 2px solid var(--color-borde-suave);
   width: 100%;
 }
+
 .nav-list {
   display: flex;
   gap: 30px;
@@ -68,6 +118,7 @@ a { text-underline-offset: 0.2em; }
   padding: 0;
   align-items: center;
 }
+
 .nav-list a {
   text-decoration: none;
   color: var(--color-principal-oscuro);
@@ -77,28 +128,53 @@ a { text-underline-offset: 0.2em; }
   letter-spacing: 0.05em;
   transition: color 0.2s ease;
 }
-.nav-list a:hover, .nav-list a.active {
+
+.nav-list a:hover,
+.nav-list a.active {
   color: var(--hoja);
 }
 
 /* ===== Hero ===== */
-.hero, .seccion {
+.hero,
+.seccion {
   max-width: 68rem;
   margin: 0 auto;
-  /* Espacio superior generoso para que el header sticky no tape los títulos */
   padding: 5rem 1.25rem 3rem 1.25rem;
   min-height: calc(100vh - 4.5rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero h2 {
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  color: var(--enlace);
+  margin-bottom: 1rem;
+}
+
+.hero p,
+.seccion p,
+.contacto-main p {
+  margin-inline: auto;
   text-align: center;
 }
 
-.hero h2 { 
-  font-size: clamp(1.25rem, 2.6vw, 1.75rem); 
-  color: var(--enlace); 
-  margin-bottom: 1rem; 
+/* Enlaces del Hero centrados y grandes */
+.hero .enlaces {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.hero .enlaces a {
+  color: var(--tinta);
+}
+
+.hero .enlaces a:hover {
+  color: var(--hoja);
 }
 
 /* ===== Sección Acerca de mí ===== */
@@ -112,104 +188,105 @@ a { text-underline-offset: 0.2em; }
   align-items: center;
 }
 
-.about-contenido { 
-  display: grid; 
-  gap: 2.5rem; 
-  align-items: center; 
-  text-align: left; 
+.about-contenido {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  text-align: left;
   width: 100%;
 }
 
-.about-contenido p, 
-.about-contenido li { 
-  text-align: left; 
-  max-width: none; /* Permite que el texto aproveche bien su columna en desktop */
+.about-contenido p,
+.about-contenido li {
+  text-align: left;
+  max-width: none;
 }
 
-.about-contenido img { 
-  width: 100%; 
-  max-width: 20rem; 
-  border-radius: 0 3rem 0 3rem; 
-  margin: 0 auto; 
+.about-contenido img {
+  width: 100%;
+  max-width: 20rem;
+  border-radius: 0 3rem 0 3rem;
+  margin: 0 auto;
   box-shadow: 0 8px 24px rgba(31, 61, 46, 0.08);
 }
 
-@media (min-width: 768px) { 
-  .about-contenido { 
-    grid-template-columns: 1fr auto; 
-  } 
+@media (min-width: 768px) {
+  .about-contenido {
+    grid-template-columns: 1fr auto;
+  }
 }
 
-/* ===== Tarjetas de proyecto (centrar botones) ===== */
-.tarjetas { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
-  gap: 1.75rem; 
-  margin-top: 1.5rem; 
-  width: 100%; 
-  text-align: left; 
+/* ===== Tarjetas de proyecto ===== */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
-.tarjeta { 
-  background: var(--superficie); 
-  border: 1px solid var(--linea); 
-  border-radius: 0 2rem 0 2rem; 
-  overflow: hidden; 
-  display: flex; 
-  flex-direction: column; 
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: 0 2rem 0 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-.tarjeta img { 
-  width: 100%; 
-  aspect-ratio: 16 / 10; 
-  object-fit: cover; 
-  background: var(--linea); 
+.tarjeta img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--linea);
 }
 
-.tarjeta-cuerpo { 
-  padding: 1.25rem 1.5rem 1.5rem; 
-  display: flex; 
-  flex-direction: column; 
-  gap: 0.6rem; 
-  flex: 1; 
+.tarjeta-cuerpo {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
 }
 
-.tarjeta-cuerpo p { 
-  margin: 0; 
-  text-align: left; 
+.tarjeta-cuerpo p {
+  margin: 0;
+  text-align: left;
 }
 
 /* Centrar los enlaces y botones dentro de las tarjetas */
-.tarjeta-enlaces { 
-  margin-top: auto; 
-  display: flex; 
-  gap: 1.25rem; 
-  flex-wrap: wrap; 
-  justify-content: center; /* Centra los enlaces de texto */
+.tarjeta-enlaces {
+  margin-top: auto;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.tarjeta-cuerpo .boton { 
-  align-self: center; 
-  margin-top: 0.5rem; 
+.tarjeta-cuerpo .boton {
+  align-self: center;
+  margin-top: 0.5rem;
 }
+
 /* ===== Etiquetas de Proyectos ===== */
-.etiqueta { 
-  align-self: flex-start; 
-  font-size: 0.85rem; 
+.etiqueta {
+  align-self: flex-start;
+  font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.25rem 0.85rem; 
-  border: 1.5px solid var(--tinta); 
-  border-radius: 999px; 
+  padding: 0.25rem 0.85rem;
+  border: 1.5px solid var(--tinta);
+  border-radius: 999px;
   background-color: var(--superficie);
   color: var(--tinta);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
-.etiqueta--proceso { 
-  border-color: var(--flor); 
-  color: var(--flor); 
-  border-style: dashed; 
+.etiqueta--proceso {
+  border-color: var(--flor);
+  color: var(--flor);
+  border-style: dashed;
   background-color: rgba(139, 74, 122, 0.04);
 }
 
@@ -218,7 +295,8 @@ a { text-underline-offset: 0.2em; }
   color: var(--hoja);
   background-color: rgba(79, 138, 91, 0.04);
 }
-/* ===== Estilo específico para alinear Habilidades y Experiencia a la izquierda ===== */
+
+/* ===== Sección alineada a izquierda ===== */
 .seccion-alineada-izquierda {
   max-width: 68rem;
   margin: 0 auto;
@@ -226,15 +304,14 @@ a { text-underline-offset: 0.2em; }
   min-height: calc(100vh - 4.5rem);
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   text-align: left;
 }
 
 .seccion-alineada-izquierda h1,
-.seccion-alineada-izquierda h2,
-.seccion-alineada-izquierda p {
+.seccion-alineada-izquierda h2 {
   text-align: left;
-  margin-left: 0;
+  width: 100%;
 }
 
 .seccion-alineada-izquierda .chips,
@@ -243,72 +320,119 @@ a { text-underline-offset: 0.2em; }
 }
 
 /* ===== Habilidades y Chips ===== */
-.grupo { margin-bottom: 2.5rem; width: 100%; }
-.chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.75rem; justify-content: center; }
-.chip { padding: 0.25rem 0.9rem; border-radius: 999px; border: 2px solid var(--tinta); background: transparent; }
-.chip--diario { background: var(--tinta); color: var(--superficie); }
-.chip--aprendo { border-style: dashed; border-color: var(--flor); }
-.leyenda { display: flex; gap: 1rem; flex-wrap: wrap; list-style: none; padding: 0; font-size: 0.95rem; justify-content: center; }
-
-/* ===== Ajustes para Proyectos ===== */
-.tarjetas { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
-  gap: 2rem; /* Mayor espacio entre tarjetas para que respiren */
-  margin-top: 2rem; 
-  width: 100%; 
-  text-align: left; 
+.grupo {
+  margin-bottom: 2.5rem;
+  width: 100%;
 }
 
-/* ===== Corrección específica para la página de Proyectos ===== */
+.chips {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  justify-content: center;
+}
+
+.chip {
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  border: 2px solid var(--tinta);
+  background: transparent;
+}
+
+.chip--diario {
+  background: var(--tinta);
+  color: var(--superficie);
+}
+
+.chip--aprendo {
+  border-style: dashed;
+  border-color: var(--flor);
+}
+
+.leyenda {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  font-size: 0.95rem;
+  justify-content: center;
+}
+
+/* ===== Página de Proyectos ===== */
 #mainCont.hero {
-  align-items: flex-start; /* Alinea todo el contenido de proyectos a la izquierda */
+  align-items: flex-start;
   text-align: left;
 }
 
 #mainCont.hero h1 {
-  text-align: left; /* Fuerza el título principal a la izquierda */
+  text-align: left;
   width: 100%;
 }
 
-/* Forzamos que los modales mantengan su ancho adecuado y texto alineado a la izquierda */
+#mainCont.hero p {
+  text-align: left;
+  margin-left: 0;
+}
+
+/* ===== Modales ===== */
+.modal-content {
+  text-align: left;
+}
+
+.modal-content a:not(.boton) {
+  color: var(--enlace);
+  text-decoration: underline;
+}
+
+.modal-content a:not(.boton):hover {
+  color: var(--tinta);
+}
+
+.modal-body p,
+.modal-body li {
+  max-width: none;
+}
+
 .modal-dialog {
-  max-width: 90% !important;
+  max-width: 90vw;
 }
 
 @media (min-width: 992px) {
-  .modal-dialog.modal-xl {
-    max-width: 1140px !important;
+  .modal-dialog.modal-lg {
+    max-width: 800px;
   }
 }
 
-.modal-content {
-  text-align: left !important;
+/* ===== Página de Contacto ===== */
+.contacto-main {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 6rem 1.25rem 4rem 1.25rem;
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.modal-body p, 
-.modal-body li {
-  text-align: left !important;
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+.contacto-main h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-/* ===== Botones y Footer Tierra ===== */
-.boton {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  background: var(--tinta);
-  color: var(--superficie);
-  border-radius: 0 1.2rem 0 1.2rem;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-.boton:hover {
-  background: var(--hoja);
-  color: var(--superficie);
+.contacto-main .enlaces {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  justify-content: center;
 }
 
+/* ===== Footer ===== */
 .pie {
   background-color: var(--tierra);
   color: var(--tierra-texto);
@@ -317,14 +441,19 @@ a { text-underline-offset: 0.2em; }
   text-align: center;
   font-size: 0.95rem;
 }
+
 .pie a {
   color: var(--tierra-texto);
   text-decoration: underline;
 }
+
 .pie a:hover {
   color: var(--superficie);
 }
 
+/* ===== Motion preferences ===== */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 }
