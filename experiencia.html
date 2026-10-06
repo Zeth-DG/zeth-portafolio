@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header id="header-global"></header>
+    <header id="header-global" class="site-header"></header>
 
-    <main id="mainCont" class="hero">
-        <div class="row">
+    <main id="mainCont" class="seccion-alineada-izquierda">
+        <div class="row w-100">
             <div id="colCont" class="col">
                 <h1>Habilidades y experiencia</h1>
 
-                <!-- Leyenda: el nivel se distingue por relleno y borde, no solo por color -->
+                <!-- Leyenda de niveles -->
                 <ul class="leyenda" aria-label="Leyenda de niveles">
                     <li><span class="chip chip--diario">Uso a diario</span></li>
                     <li><span class="chip">Con experiencia</span></li>
@@ -28,34 +28,40 @@
                 </ul>
 
                 <section class="grupo" aria-labelledby="t-web">
-                    <h2 id="t-web">Tecnologías web</h2>
+                    <h2 id="t-web">Tecnologías web & lenguajes</h2>
                     <ul class="chips">
-                        <!-- Ajusta el nivel cambiando la clase: chip--diario | (ninguna) | chip--aprendo -->
                         <li class="chip">Java</li>
                         <li class="chip">JavaScript</li>
                         <li class="chip">SQL</li>
-                        <li class="chip">HTML</li>
-                        <li class="chip">CSS</li>
-                        <li class="chip">Bootstrap</li>
+                        <li class="chip chip--diario">HTML5 + Bootstrap</li>
+                        <li class="chip">CSS3</li>
+                        <li class="chip chip--aprendo">Spring Boot</li>
+                        <li class="chip chip--aprendo">React</li>
                         <li class="chip">Jest</li>
                     </ul>
                 </section>
 
                 <section class="grupo" aria-labelledby="t-herr">
-                    <h2 id="t-herr">Herramientas</h2>
+                    <h2 id="t-herr">Herramientas & entornos</h2>
                     <ul class="chips">
-                        <li class="chip">Git y GitHub</li>
+                        <li class="chip chip--diario">Git y GitHub</li>
                         <li class="chip">ThingsBoard</li>
+                        <li class="chip chip--aprendo">Postman</li>
+                        <li class="chip">Figma</li>
+                        <li class="chip chip--diario">VS Code / IntelliJ IDEA</li>
                     </ul>
                 </section>
 
-                <section class="grupo" aria-labelledby="t-otras">
-                    <h2 id="t-otras">Otras habilidades</h2>
+                <section class="grupo" aria-labelledby="t-pro">
+                    <h2 id="t-pro">Habilidades técnicas y de entorno profesional</h2>
                     <ul class="chips">
                         <li class="chip">Coordinación de proyectos</li>
                         <li class="chip">Documentación y trazabilidad</li>
-                        <li class="chip">Comunicación entre equipos</li>
-                        <li class="chip">Método científico</li>
+                        <li class="chip chip--diario">Comunicación entre equipos</li>
+                        <li class="chip">Método científico y análisis de datos</li>
+                        <li class="chip">Control de versiones en equipo</li>
+                        <li class="chip">R</li>
+                        <li class="chip">Línea de comandos</li>
                     </ul>
                 </section>
             </div>

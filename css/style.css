@@ -81,7 +81,7 @@ a { text-underline-offset: 0.2em; }
   color: var(--hoja);
 }
 
-/* ===== Pantallazos Principales / Hero ===== */
+/* ===== Hero ===== */
 .hero, .seccion {
   max-width: 68rem;
   margin: 0 auto;
@@ -101,12 +101,11 @@ a { text-underline-offset: 0.2em; }
   margin-bottom: 1rem; 
 }
 
-/* ===== Sección Acerca de mí (Ajustada para que no se mueva) ===== */
+/* ===== Sección Acerca de mí ===== */
 .about {
   max-width: 68rem;
   margin: 0 auto;
   padding: 5rem 1.25rem;
-  /* Quitamos el min-height: 100vh para que fluya de manera natural y no se distorsione */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,7 +189,7 @@ a { text-underline-offset: 0.2em; }
 }
 
 .tarjeta-cuerpo .boton { 
-  align-self: center; /* Centra el botón si lo hay */
+  align-self: center; 
   margin-top: 0.5rem; 
 }
 /* ===== Etiquetas de Proyectos ===== */
@@ -218,6 +217,29 @@ a { text-underline-offset: 0.2em; }
   border-color: var(--hoja);
   color: var(--hoja);
   background-color: rgba(79, 138, 91, 0.04);
+}
+/* ===== Estilo específico para alinear Habilidades y Experiencia a la izquierda ===== */
+.seccion-alineada-izquierda {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 5rem 1.25rem 3rem 1.25rem;
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-align: left;
+}
+
+.seccion-alineada-izquierda h1,
+.seccion-alineada-izquierda h2,
+.seccion-alineada-izquierda p {
+  text-align: left;
+  margin-left: 0;
+}
+
+.seccion-alineada-izquierda .chips,
+.seccion-alineada-izquierda .leyenda {
+  justify-content: flex-start;
 }
 
 /* ===== Habilidades y Chips ===== */
