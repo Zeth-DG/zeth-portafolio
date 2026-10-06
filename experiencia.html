@@ -1,3 +1,4 @@
+<!-- experience.html (habilidades.html) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habilidades y experiencia | Lizeth Dorantes</title>
     <meta name="description" content="Tecnologías, herramientas y habilidades de Lizeth Dorantes, desarrolladora Java Full Stack Jr.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -15,56 +18,54 @@
 <body>
     <header id="header-global" class="site-header"></header>
 
-    <main id="mainCont" class="seccion-alineada-izquierda">
-        <div class="row w-100">
-            <div id="colCont" class="col">
-                <h1>Habilidades y experiencia</h1>
+    <main class="seccion-alineada-izquierda">
+        <div class="w-100">
+            <h1>Habilidades y experiencia</h1>
 
-                <!-- Leyenda de niveles -->
-                <ul class="leyenda" aria-label="Leyenda de niveles">
-                    <li><span class="chip chip--diario">Uso a diario</span></li>
-                    <li><span class="chip">Con experiencia</span></li>
-                    <li><span class="chip chip--aprendo">Aprendiendo</span></li>
+            <!-- Leyenda de niveles -->
+            <ul class="leyenda" aria-label="Leyenda de niveles">
+                <li><span class="chip chip--diario">Uso a diario</span></li>
+                <li><span class="chip">Con experiencia</span></li>
+                <li><span class="chip chip--aprendo">Aprendiendo</span></li>
+            </ul>
+
+            <section class="grupo" aria-labelledby="t-web">
+                <h2 id="t-web">Tecnologías web & lenguajes</h2>
+                <ul class="chips">
+                    <li class="chip">Java</li>
+                    <li class="chip">JavaScript</li>
+                    <li class="chip">SQL</li>
+                    <li class="chip chip--diario">HTML5 + Bootstrap</li>
+                    <li class="chip">CSS3</li>
+                    <li class="chip chip--aprendo">Spring Boot</li>
+                    <li class="chip chip--aprendo">React</li>
+                    <li class="chip">Jest</li>
                 </ul>
+            </section>
 
-                <section class="grupo" aria-labelledby="t-web">
-                    <h2 id="t-web">Tecnologías web & lenguajes</h2>
-                    <ul class="chips">
-                        <li class="chip">Java</li>
-                        <li class="chip">JavaScript</li>
-                        <li class="chip">SQL</li>
-                        <li class="chip chip--diario">HTML5 + Bootstrap</li>
-                        <li class="chip">CSS3</li>
-                        <li class="chip chip--aprendo">Spring Boot</li>
-                        <li class="chip chip--aprendo">React</li>
-                        <li class="chip">Jest</li>
-                    </ul>
-                </section>
+            <section class="grupo" aria-labelledby="t-herr">
+                <h2 id="t-herr">Herramientas & entornos</h2>
+                <ul class="chips">
+                    <li class="chip chip--diario">Git y GitHub</li>
+                    <li class="chip">ThingsBoard</li>
+                    <li class="chip chip--aprendo">Postman</li>
+                    <li class="chip">Figma</li>
+                    <li class="chip chip--diario">VS Code / IntelliJ IDEA</li>
+                </ul>
+            </section>
 
-                <section class="grupo" aria-labelledby="t-herr">
-                    <h2 id="t-herr">Herramientas & entornos</h2>
-                    <ul class="chips">
-                        <li class="chip chip--diario">Git y GitHub</li>
-                        <li class="chip">ThingsBoard</li>
-                        <li class="chip chip--aprendo">Postman</li>
-                        <li class="chip">Figma</li>
-                        <li class="chip chip--diario">VS Code / IntelliJ IDEA</li>
-                    </ul>
-                </section>
-
-                <section class="grupo" aria-labelledby="t-pro">
-                    <h2 id="t-pro">Habilidades técnicas y de entorno profesional</h2>
-                    <ul class="chips">
-                        <li class="chip">Coordinación de proyectos</li>
-                        <li class="chip">Documentación y trazabilidad</li>
-                        <li class="chip chip--diario">Comunicación entre equipos</li>
-                        <li class="chip">Método científico y análisis de datos</li>
-                        <li class="chip">Control de versiones en equipo</li>
-                        <li class="chip">R</li>
-                        <li class="chip">Línea de comandos</li>
-                    </ul>
-                </section>
-            </div>
+            <section class="grupo" aria-labelledby="t-pro">
+                <h2 id="t-pro">Habilidades técnicas y de entorno profesional</h2>
+                <ul class="chips">
+                    <li class="chip">Coordinación de proyectos</li>
+                    <li class="chip">Documentación y trazabilidad</li>
+                    <li class="chip chip--diario">Comunicación entre equipos</li>
+                    <li class="chip">Método científico y análisis de datos</li>
+                    <li class="chip">Control de versiones en equipo</li>
+                    <li class="chip">R</li>
+                    <li class="chip">Línea de comandos</li>
+                </ul>
+            </section>
         </div>
     </main>
 
