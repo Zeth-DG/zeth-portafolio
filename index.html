@@ -23,26 +23,17 @@
     <header id="header-global" class="site-header"></header>
 
     <main>
-        <section id="mainCont" class="hero">
+        <!-- Pantalla 1: Presentación -->
+        <section class="hero">
             <div id="colCont">
                 <h1>¡Hola! Mi nombre es Lizeth Dorantes:</h1>
                 <h2>Desarrolladora Full Stack (Java)</h2>
                 <h3>Con experiencia en datos ambientales e IoT.</h3>
                 <p>Desarrollo aplicaciones web claras, útiles y fáciles de usar.</p>
 
-                <div id="clima" class="lectura" aria-live="polite">
-                    <p class="lectura-titulo">Temperatura y calidad del aire en Toluca</p>
-                    <p class="lectura-datos">
-                        <span><strong id="temp">--</strong> °C</span>
-                        <span><abbr title="Partículas finas de hasta 2.5 micras">PM2.5</abbr>: <strong id="pm25">--</strong> µg/m³</span>
-                        <span><abbr title="Partículas de hasta 10 micras">PM10</abbr>: <strong id="pm10">--</strong> µg/m³</span>
-                    </p>
-                    <p class="lectura-fuente">Datos en vivo de Open-Meteo (modelo de calidad del aire, no una estación)</p>
-                </div>
-
                 <nav class="enlaces" aria-label="Enlaces principales">
                     <a href="#about" aria-label="Acerca de mí"><i class="bi bi-emoji-smile-fill" aria-hidden="true"></i></a>
-                    <a href="./projects.html" aria-label="Proyectos"><i class="bi bi-folder" aria-hidden="true"></i></a>
+                    <a href="#destacados" aria-label="Proyectos"><i class="bi bi-folder" aria-hidden="true"></i></a>
                     <a href="https://github.com/Zeth-DG" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i></a>
                     <a href="https://www.linkedin.com/in/lizeth-dorantes/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
                 </nav>
@@ -51,37 +42,50 @@
 
         <div class="separador" role="presentation"></div>
 
+        <!-- Proyectos destacados -->
         <section id="destacados" class="seccion" aria-labelledby="t-destacados">
             <h2 id="t-destacados">Proyectos destacados</h2>
             <div class="tarjetas">
                 <article class="tarjeta">
-                    <img src="./images/tierra-deportiva.png" alt="Captura de la landing page Tierra Deportiva" width="640" height="400" loading="lazy">
+                    <img src="./images/sketch-and-coffee.png" alt="Captura index de Sketch &amp; Coffee" width="640" height="400" loading="lazy">
                     <div class="tarjeta-cuerpo">
-                        <span class="etiqueta">Equipo</span>
-                        <h3>Tierra Deportiva</h3>
-                        <p>Landing page interactiva creada en un hackathon (de un día).</p>
+                        <span class="etiqueta etiqueta--proceso">En proceso</span>
+                        <h3>Sketch &amp; Coffee</h3>
+                        <p>Tienda en línea. Frontend funcional, backend en desarrollo.</p>
                         <div class="tarjeta-enlaces">
-                            <a href="https://github.com/Manutaro/Hackathon-1-Landing-page-interactiva" target="_blank" rel="noopener noreferrer">Código</a>
+                            <a href="./proyectos.html#tarjeta-sketch">Ver detalle</a>
                         </div>
                     </div>
                 </article>
                 <article class="tarjeta">
-                    <img src="./images/neme.png" alt="Captura de la landing page Neme de ropa deportiva" width="640" height="400" loading="lazy">
+                    <img src="./images/neme.png" alt="Captura de la landing page Neme" width="640" height="400" loading="lazy">
                     <div class="tarjeta-cuerpo">
                         <span class="etiqueta">Individual</span>
                         <h3>Neme</h3>
                         <p>Landing page responsiva para una tienda de ropa deportiva, hecha en una semana.</p>
                         <div class="tarjeta-enlaces">
-                            <a href="https://github.com/Zeth-DG/neme-landpage-ropa-deportiva" target="_blank" rel="noopener noreferrer">Código</a>
+                            <a href="./proyectos.html#tarjeta-neme">Ver detalle</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="./images/tierra-deportiva.png" alt="Captura de la landing page Tierra Deportiva" width="640" height="400" loading="lazy">
+                    <div class="tarjeta-cuerpo">
+                        <span class="etiqueta">Equipo</span>
+                        <h3>Tierra Deportiva</h3>
+                        <p>Landing page interactiva creada en equipo en un hackathon.</p>
+                        <div class="tarjeta-enlaces">
+                            <a href="./proyectos.html#tarjeta-tierraD" target="_blank" rel="noopener noreferrer">Ver detalle</a>
                         </div>
                     </div>
                 </article>
             </div>
-            <p><a href="./projects.html">Ver todos los proyectos</a></p>
+            <p style="margin-top: 1.5rem;"><a href="./proyectos.html">Ver todos los proyectos y detalles</a></p>
         </section>
         
         <div class="separador" role="presentation"></div>
 
+        <!-- Pantalla 3: Acerca de mí -->
         <section id="about" class="about" aria-labelledby="t-about">
             <div class="about-contenido">
                 <div class="about-texto">
